@@ -36,6 +36,8 @@ pkg:macos jj
 pkg:arch jujutsu
 pkg:macos gh
 pkg:arch github-cli
+pkg:macos font-iosevka-term-nerd-font
+pkg:arch ttf-iosevkaterm-nerd
 
 ##################################################
 # Arch specific tools.                           #
@@ -48,6 +50,7 @@ pkg:arch github-cli
 pkg:arch sway
 pkg:arch waybar
 pkg:arch rofi
+pkg:arch wl-clipboard
 
 ##################################################
 # MacOS specific applications.                   #

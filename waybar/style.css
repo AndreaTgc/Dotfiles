@@ -27,3 +27,15 @@ window#waybar {
     padding: 0 12px;
     font-weight: 500;
 }
+
+#network {
+    color: #cdd6f4;
+    padding: 0 12px;
+    font-weight: 500;
+}
+
+#custom-power {
+    color: #cdd6f4;
+    padding: 0 12px;
+    font-weight: 500;
+}

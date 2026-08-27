@@ -2,8 +2,11 @@
 import = [ "theme.toml" ]
 
 [window]
-padding = { x = 14, y = 14 }
+padding = { x = 14, y = 10 }
 opacity = 0.9
 
 [font]
 size = 16.0
+
+[font.normal]
+family = "IosevkaTerm Nerd Font"

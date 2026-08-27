@@ -6,9 +6,10 @@
     
     "modules-left": [],
     "modules-center": ["sway/workspaces"],
-    "modules-right": ["clock"],
+    "modules-right": ["clock", "network", "custom/power"],
 
     "sway/workspaces": {
+        "tooltip": false,
         "disable-scroll": true,
         "all-outputs": true,
         "format": "",
@@ -19,5 +20,21 @@
             "4": [],
             "5": []
         }
+    },
+
+    "network": {
+        "tooltip": false,
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "format-disconnected": "Disconnected",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "sh $HOME/.config/waybar/scripts/rofi-wifi.sh"
+    },
+
+    "custom/power": {
+        "tooltip": false,
+        "format": "Power",
+        "on-click": "sh $HOME/.config/waybar/scripts/rofi-power.sh"
     }
 }
