@@ -1,0 +1,8 @@
+# Prompt
+PROMPT="%~ # "
+
+# Command aliasing
+alias ..='cd ..'
+
+# Misc variables
+export EDITOR=nvim

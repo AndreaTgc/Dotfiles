@@ -71,7 +71,7 @@ while read -r directive a b; do
             src="$manifest_dir/$a"
             echo "linking $target -> $src"
             mkdir -p "$(dirname "$target")"
-            ln -sf "$src" "$target"
+            ln -sfn "$src" "$target"
             ;;
     esac
 done < "$manifest"

@@ -1,0 +1,53 @@
+* {
+    bg: #1e1e2eff;
+    bg-alt: #313244ff;
+    fg: #cdd6f4ff;
+    accent: #89b4faff;
+    muted: #6c7086ff;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    background-color: @bg;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 8px;
+    width: 480px;
+    padding: 12px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 10px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius: 6px;
+    padding: 8px 12px;
+    children: [ entry ];
+}
+
+entry {
+    placeholder: "Search:";
+    placeholder-color: @muted;
+}
+
+listview {
+    lines: 8;
+    spacing: 4px;
+    fixed-height: false;
+    scrollbar: false;
+}
+
+element {
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+element-icon {
+    size: 1.1em;
+}
+

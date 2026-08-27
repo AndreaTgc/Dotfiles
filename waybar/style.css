@@ -1,0 +1,29 @@
+window#waybar {
+    background-color: #1e1e2e;
+}
+
+#workspaces {
+    margin: 0 8px;
+}
+
+#workspaces button {
+    padding: 0;
+    margin: 4 2px;
+    min-width: 8px;
+    min-height: 8px;
+    border-radius: 20%;
+    background-color: #45475a;
+    border: none;
+}
+
+#workspaces button.focused {
+    background-color: #89b4fa;
+    min-width: 10px;
+    min-height: 10px;
+}
+
+#clock {
+    color: #cdd6f4;
+    padding: 0 12px;
+    font-weight: 500;
+}

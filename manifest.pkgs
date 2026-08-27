@@ -10,10 +10,8 @@
 pkg ripgrep
 pkg bat
 pkg git
-pkg gh
 pkg tree
 pkg btop
-pkg jj
 pkg fzf
 pkg fd
 pkg eza
@@ -26,8 +24,30 @@ pkg lua
 pkg rustup
 pkg typst
 pkg nvim
-cask vscodium
+pkg zsh
 cask alacritty
+cask firefox
+
+# Note: these are not meant to be platform specific
+# but there are some naming inconsistencies between
+# systems. so they end up here
+
+pkg:macos jj
+pkg:arch jujutsu
+pkg:macos gh
+pkg:arch github-cli
+
+##################################################
+# Arch specific tools.                           #
+# This section contains some packages that only  #
+# come with arch/linux systems, things like WMs  #
+# and other configuration tools for the desktop  #
+# environment can only be installed here         #
+##################################################
+
+pkg:arch sway
+pkg:arch waybar
+pkg:arch rofi
 
 ##################################################
 # MacOS specific applications.                   #
@@ -37,6 +57,7 @@ cask alacritty
 ##################################################
 
 cask:macos claude-code
+cask:macos vscodium
 
 ##################################################
 # Configuration symlinks.                        #
@@ -45,5 +66,10 @@ cask:macos claude-code
 # locations on the system                        #
 ##################################################
 
-link alacritty ~/.config/alacritty
+link zsh/zprofile ~/.zprofile
+link zsh/zshrc ~/.zshrc
 link nvim ~/.config/nvim
+link alacritty ~/.config/alacritty
+link:arch sway ~/.config/sway
+link:arch waybar ~/.config/waybar
+link:arch rofi ~/.config/rofi

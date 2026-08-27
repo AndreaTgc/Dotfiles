@@ -14,6 +14,7 @@ vim.opt.undofile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.swapfile = false
+vim.opt.scrolloff = 10
 
 vim.cmd("colorscheme catppuccin")
 
