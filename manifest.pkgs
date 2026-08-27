@@ -1,0 +1,49 @@
+##################################################
+# Common Packages.                               #
+# These packages are some essentials that i want #
+# to have installed on all my systems            #
+# 'cask' and 'pkg' have the same effect on linux #
+# systems. they are only needed for MacOS.       #
+# NOTE: only Arch supported as linux for now     #
+##################################################
+
+pkg ripgrep
+pkg bat
+pkg git
+pkg gh
+pkg tree
+pkg btop
+pkg jj
+pkg fzf
+pkg fd
+pkg eza
+pkg zoxide
+pkg jq
+pkg tmux
+pkg zig
+pkg odin
+pkg lua
+pkg rustup
+pkg typst
+pkg nvim
+cask vscodium
+cask alacritty
+
+##################################################
+# MacOS specific applications.                   #
+# These packages are meant to be installed only  #
+# on MacOS systems as they may not be present on #
+# linux systems                                  #
+##################################################
+
+cask:macos claude-code
+
+##################################################
+# Configuration symlinks.                        #
+# These link definitions are just to deploy the  #
+# dotfiles stored in the repo to their correct   #
+# locations on the system                        #
+##################################################
+
+link alacritty ~/.config/alacritty
+link nvim ~/.config/nvim

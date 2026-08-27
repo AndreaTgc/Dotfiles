@@ -1,0 +1,9 @@
+[general]
+import = [ "theme.toml" ]
+
+[window]
+padding = { x = 14, y = 14 }
+opacity = 0.9
+
+[font]
+size = 16.0
