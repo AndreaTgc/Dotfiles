@@ -1,5 +1,5 @@
 # This is meant to run the sway window manager only on linux systems.
 # I currently use this only for my arch configuration
-if [ "$(uname -s)" = "Linux" ] && [ -z "WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+if [ "$(uname -s)" = "Linux" ] && [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
     exec sway
 fi
