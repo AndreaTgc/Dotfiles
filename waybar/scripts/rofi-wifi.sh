@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+ROFI_THEME="$HOME/.config/rofi/wifipicker-style.rasi"
+
 # Get available Wi-Fi networks
 networks=$(nmcli -t -f IN-USE,SSID,SIGNAL,SECURITY device wifi list \
     | awk -F: '
@@ -17,6 +19,7 @@ networks=$(nmcli -t -f IN-USE,SSID,SIGNAL,SECURITY device wifi list \
 selected=$(printf '%s\n' "$networks" | rofi \
     -dmenu \
     -i \
+    -theme "$ROFI_THEME" \
     -p "Wi-Fi" \
     -no-custom)
 
