@@ -1,3 +1,5 @@
+output * bg  ~/Pictures/Wallpapers/bluehour.jpg fill
+
 set $mod mod4
 set $term alacritty
 
@@ -17,6 +19,8 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
+
+bindsym $mod+Shift+s exec grim -g "$(slurp)" "$HOME/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
 
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2 

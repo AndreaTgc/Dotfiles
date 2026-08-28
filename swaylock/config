@@ -1,0 +1,48 @@
+font="IosevkaTerm Nerd Font"
+
+# ~/.config/swaylock/config
+
+# General
+ignore-empty-password
+show-failed-attempts
+
+# Background
+color=1e1e2e
+
+# Indicator
+indicator-radius=100
+indicator-thickness=7
+
+# Normal
+inside-color=313244
+ring-color=585b70
+line-color=45475a
+text-color=cdd6f4
+
+# Password entered
+inside-clear-color=45475a
+ring-clear-color=89b4fa
+line-clear-color=89b4fa
+text-clear-color=cdd6f4
+
+# Verifying
+inside-ver-color=313244
+ring-ver-color=a6e3a1
+line-ver-color=a6e3a1
+text-ver-color=a6e3a1
+
+# Wrong password
+inside-wrong-color=f38ba8
+ring-wrong-color=f38ba8
+line-wrong-color=f38ba8
+text-wrong-color=f38ba8
+
+# Key press feedback
+key-hl-color=89b4fa
+bs-hl-color=f38ba8
+
+# Separator between indicator segments
+separator-color=1e1e2e
+
+# Wallpaper
+image=/home/andreacolombo/Pictures/Wallpapers/bluehour.jpg

@@ -49,9 +49,13 @@ pkg:arch ttf-iosevkaterm-nerd
 ##################################################
 
 pkg:arch sway
+pkg:arch swaylock
+pkg:arch swaybg
 pkg:arch waybar
 pkg:arch rofi
 pkg:arch wl-clipboard
+pkg:arch grim
+pkg:arch slurp
 
 ##################################################
 # MacOS specific applications.                   #
@@ -78,3 +82,5 @@ link tmux/tmux.conf ~/.tmux.conf
 link:arch sway ~/.config/sway
 link:arch waybar ~/.config/waybar
 link:arch rofi ~/.config/rofi
+link:arch swaylock ~/.config/swaylock
+link:arch wallpapers/bluehour.jpg ~/Pictures/Wallpapers/bluehour.jpg
