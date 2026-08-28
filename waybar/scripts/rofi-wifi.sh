@@ -20,7 +20,7 @@ selected=$(printf '%s\n' "$networks" | rofi \
     -dmenu \
     -i \
     -theme "$ROFI_THEME" \
-    -p "Wi-Fi" \
+    -p "" \
     -no-custom)
 
 [ -z "$selected" ] && exit 0
