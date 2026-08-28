@@ -1,8 +1,21 @@
+# Misc configuration
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:descriptions' format '%F{blue}-- %d --%f'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+setopt CORRECT # Suggest fixes for typos
+
 # Prompt
 PROMPT="%~ # "
 
 # Command aliasing
 alias ..='cd ..'
+alias l="eza -l"
 
 # Misc variables
 export EDITOR=nvim

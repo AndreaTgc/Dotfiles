@@ -1,4 +1,5 @@
 configuration {
+    font: "IosevkaTerm Nerd Font 16";
     modi: "drun";
     show-icons: true;
     icon-theme: "Papirus";
@@ -6,4 +7,4 @@ configuration {
     display-drun: "Apps";
 }
 
-@theme "style"
+@theme "default-style"

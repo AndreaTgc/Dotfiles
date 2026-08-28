@@ -7,6 +7,7 @@
 # NOTE: only Arch supported as linux for now     #
 ##################################################
 
+pkg lazygit
 pkg ripgrep
 pkg bat
 pkg git
@@ -73,6 +74,7 @@ link zsh/zprofile ~/.zprofile
 link zsh/zshrc ~/.zshrc
 link nvim ~/.config/nvim
 link alacritty ~/.config/alacritty
+link tmux/tmux.conf ~/.tmux.conf
 link:arch sway ~/.config/sway
 link:arch waybar ~/.config/waybar
 link:arch rofi ~/.config/rofi
