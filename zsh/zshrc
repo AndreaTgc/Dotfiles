@@ -1,4 +1,6 @@
 # Misc configuration
+eval "$(zoxide init zsh)"
+
 autoload -Uz compinit
 compinit
 

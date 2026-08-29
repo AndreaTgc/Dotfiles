@@ -45,14 +45,19 @@ window#waybar {
     background: #f38ba8;
 }
 
+#window,
 #clock,
 #network,
 #custom-power {
     margin: 5px 0;
     padding: 0 12px;
-
     background: #313244;
     color: #cdd6f4;
+}
+
+#window {
+    margin-left: 8px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 #clock {

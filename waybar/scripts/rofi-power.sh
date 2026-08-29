@@ -2,7 +2,7 @@
 
 ROFI_THEME="$HOME/.config/rofi/powermenu-style.rasi"
 
-choice=$(printf "Lock\nLogout\nSuspend\nReboot\nShutdown\n" |
+choice=$(printf "%s\n" "Lock" "Logout" "Suspend" "Reboot" "Shutdown" |
     rofi -dmenu -i -p "Power" -theme="$ROFI_THEME")
 
 case "$choice" in

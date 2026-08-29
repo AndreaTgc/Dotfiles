@@ -2,11 +2,11 @@
 
 window {
     background-color: @bg;
-    border:            2px;
-    border-color:      @red;
-    border-radius:      12px;
-    width:              320px;
-    padding:            16px;
+    border: 2px;
+    border-color: @red;
+    border-radius: 12px;
+    width: 320px;
+    padding: 16px;
 }
 
 mainbox {
@@ -14,30 +14,30 @@ mainbox {
 }
 
 listview {
-    columns:      5;
-    lines:        1;
-    spacing:      8px;
+    columns: 5;
+    lines: 1;
+    spacing: 8px;
     fixed-height: false;
-    scrollbar:    false;
+    scrollbar: false;
 }
 
 element {
-    padding:        10px;
-    border-radius:  10px;
-    orientation:    vertical;
+    padding: 10px;
+    border-radius: 10px;
+    orientation: vertical;
 }
 
 element-icon {
-    size:            1.8em;
+    size: 1.8em;
     horizontal-align: 0.5;
 }
 
 element-text {
     horizontal-align: 0.5;
-    font:             "IosevkaTerm Nerd Font Medium 9";
+    font: "IosevkaTerm Nerd Font Medium 9";
 }
 
 element selected {
     background-color: @red;
-    text-color:        @bg;
+    text-color: @bg;
 }

@@ -4,9 +4,15 @@
     "height": 32,
     "spacing": 0,
     
-    "modules-left": [],
+    "modules-left": ["sway/window"],
     "modules-center": ["sway/workspaces"],
     "modules-right": ["clock", "network", "custom/power"],
+
+    "sway/window": {
+        "format": "{}",
+        "tooltip": false,
+        "max-length": 40
+    },
 
     "sway/workspaces": {
         "tooltip": false,

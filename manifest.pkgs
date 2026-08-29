@@ -53,6 +53,8 @@ pkg:arch swaylock
 pkg:arch swaybg
 pkg:arch waybar
 pkg:arch rofi
+pkg:arch mako
+pkg:arch libnotify
 pkg:arch wl-clipboard
 pkg:arch grim
 pkg:arch slurp
@@ -83,4 +85,5 @@ link:arch sway ~/.config/sway
 link:arch waybar ~/.config/waybar
 link:arch rofi ~/.config/rofi
 link:arch swaylock ~/.config/swaylock
+link:arch mako ~/.config/mako
 link:arch wallpapers/bluehour.jpg ~/Pictures/Wallpapers/bluehour.jpg
