@@ -9,6 +9,11 @@ bar {
 
 exec mako
 
+exec swayidle -w \
+    timeout 180 'swaylock -f' \
+    timeout 240 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f'
+
 input "type:keyboard" {
     xkb_layout "it"
 }

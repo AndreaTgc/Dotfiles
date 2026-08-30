@@ -1,7 +1,6 @@
-vim.cmd("colorscheme catppuccin")
-
 require "config.opts"
 require "config.lsp"
+require "config.theme"
 
 vim.pack.add({
 	{ src = "https://github.com/echasnovski/mini.nvim" },

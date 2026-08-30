@@ -53,6 +53,7 @@ pkg:arch ttf-iosevkaterm-nerd
 pkg:arch sway
 pkg:arch swaylock
 pkg:arch swaybg
+pkg:arch swayidle
 pkg:arch waybar
 pkg:arch rofi
 pkg:arch mako
