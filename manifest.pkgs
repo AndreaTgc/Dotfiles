@@ -29,6 +29,8 @@ pkg zsh
 cask alacritty
 cask firefox
 
+pkg lua-language-server
+
 # Note: these are not meant to be platform specific
 # but there are some naming inconsistencies between
 # systems. so they end up here
