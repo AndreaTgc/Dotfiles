@@ -44,10 +44,15 @@ pkg:macos font-iosevka-term-nerd-font
 pkg:arch ttf-iosevkaterm-nerd
 
 # Latex environment
-pkg:macos basictex
-pkg:arch texlive-basic
-pkg:arch texlive-latex
-pkg:arch texlive-latexrecommended
+# This is currently not needed but i keep this here
+# since it might come up in the future.
+# The environment is sadly not 1 to 1 but i'll deal
+# with it (just use typst for now)
+# 
+# pkg:macos basictex
+# pkg:arch texlive-basic
+# pkg:arch texlive-latex
+# pkg:arch texlive-latexrecommended
 
 ##################################################
 # Arch specific tools.                           #
