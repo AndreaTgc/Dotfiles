@@ -30,6 +30,7 @@ cask alacritty
 cask firefox
 
 pkg lua-language-server
+pkg tinymist
 
 # Note: these are not meant to be platform specific
 # but there are some naming inconsistencies between
@@ -41,6 +42,12 @@ pkg:macos gh
 pkg:arch github-cli
 pkg:macos font-iosevka-term-nerd-font
 pkg:arch ttf-iosevkaterm-nerd
+
+# Latex environment
+pkg:macos basictex
+pkg:arch texlive-basic
+pkg:arch texlive-latex
+pkg:arch texlive-latexrecommended
 
 ##################################################
 # Arch specific tools.                           #
@@ -61,6 +68,8 @@ pkg:arch libnotify
 pkg:arch wl-clipboard
 pkg:arch grim
 pkg:arch slurp
+pkg:arch zathura
+pkg:arch zathura-pdf-mupdf
 
 ##################################################
 # MacOS specific applications.                   #
