@@ -2,8 +2,6 @@
 # Common Packages.                               #
 # These packages are some essentials that i want #
 # to have installed on all my systems            #
-# 'cask' and 'pkg' have the same effect on linux #
-# systems. they are only needed for MacOS.       #
 # NOTE: only Arch supported as linux for now     #
 ##################################################
 
@@ -24,13 +22,9 @@ pkg odin
 pkg lua
 pkg rustup
 pkg typst
-pkg nvim
 pkg zsh
-cask alacritty
-cask firefox
-
+pkg alacritty
 pkg lua-language-server
-pkg tinymist
 
 # Note: these are not meant to be platform specific
 # but there are some naming inconsistencies between
@@ -40,8 +34,15 @@ pkg:macos jj
 pkg:arch jujutsu
 pkg:macos gh
 pkg:arch github-cli
-pkg:macos font-iosevka-term-nerd-font
+# The Iosevka nerd font is not directly available on
+# macports so we just install it manually with macos
+# once
 pkg:arch ttf-iosevkaterm-nerd
+pkg:macos neovim 
+pkg:arch nvim
+# Tinymist is not directly available on macports so
+# we have to find a way to install it with cargo (?)
+pkg:arch tinymist
 
 # Latex environment
 # This is currently not needed but i keep this here
@@ -62,6 +63,7 @@ pkg:arch ttf-iosevkaterm-nerd
 # environment can only be installed here         #
 ##################################################
 
+pkg:arch firefox
 pkg:arch sway
 pkg:arch swaylock
 pkg:arch swaybg
@@ -83,8 +85,7 @@ pkg:arch zathura-pdf-mupdf
 # linux systems                                  #
 ##################################################
 
-cask:macos claude-code
-cask:macos vscodium
+pkg:macos claude-code
 
 ##################################################
 # Configuration symlinks.                        #

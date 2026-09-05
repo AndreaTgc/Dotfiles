@@ -16,12 +16,12 @@ manifest_dir="$(cd "$(dirname "$manifest")" && pwd)"
 install_pkg() {
     local pkg="$1"
     if [[ "$plat" == "macos" ]]; then
-        if brew list --formula "$pkg" &>/dev/null; then
+        if port -q installed "$pkg" 2>/dev/null | grep -q "^ *$pkg "; then
             echo "$pkg already installed, skipping"
             return
         fi
-        echo "installing $pkg (brew)"
-        brew install "$pkg" || failed+=("$pkg")
+        echo "installing $pkg (ports)"
+        sudo port install "$pkg" || failed+=("$pkg")
     else
         if pacman -Qi "$pkg" &>/dev/null; then
             echo "$pkg already installed, skipping"
@@ -33,21 +33,7 @@ install_pkg() {
 }
 
 install_cask() {
-    local pkg="$1"
-    if [[ "$plat" == "macos" ]]; then
-        if brew list --cask "$pkg" &>/dev/null; then
-            echo "$pkg already installed, skipping"
-            return
-        fi
-        echo "installing $pkg (brew --cask)"
-        brew install --cask "$pkg" || failed+=("$pkg")
-    else
-        # No separate "cask" concept on Arch -- same as install_pkg.
-        # Not every macOS cask name matches an Arch package name (e.g.
-        # claude-code isn't in the official repos at all) -- on failure
-        # we record it and keep going rather than aborting the manifest.
-        install_pkg "$pkg"
-    fi
+    install_pkg "$1"
 }
 
 while read -r directive a b; do
