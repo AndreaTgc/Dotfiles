@@ -24,6 +24,8 @@ pkg rustup
 pkg typst
 pkg zsh
 pkg alacritty
+pkg python
+
 pkg lua-language-server
 
 # Note: these are not meant to be platform specific
@@ -64,6 +66,8 @@ pkg:arch tinymist
 ##################################################
 
 pkg:arch firefox
+pkg:arch base
+pkg:arch base-devel
 pkg:arch sway
 pkg:arch swaylock
 pkg:arch swaybg
