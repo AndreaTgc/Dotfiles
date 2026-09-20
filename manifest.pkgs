@@ -26,6 +26,7 @@ pkg zsh
 pkg alacritty
 pkg python
 pkg go
+pkg cmake
 
 pkg lua-language-server
 
@@ -46,6 +47,8 @@ pkg:arch nvim
 # Tinymist is not directly available on macports so
 # we have to find a way to install it with cargo (?)
 pkg:arch tinymist
+pkg:arch usbutils
+pkg:arch dmidecode
 
 # Latex environment
 # This is currently not needed but i keep this here
