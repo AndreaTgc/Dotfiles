@@ -15,4 +15,4 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.swapfile = false
 vim.opt.scrolloff = 10
-
+vim.opt.colorcolumn = "80,100"

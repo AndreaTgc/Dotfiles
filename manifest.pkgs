@@ -25,6 +25,7 @@ pkg typst
 pkg zsh
 pkg alacritty
 pkg python
+pkg go
 
 pkg lua-language-server
 
