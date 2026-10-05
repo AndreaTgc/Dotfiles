@@ -24,9 +24,11 @@ pkg rustup
 pkg typst
 pkg zsh
 pkg alacritty
-pkg python
+pkg python3
 pkg go
 pkg cmake
+pkg uv
+pkg kakoune
 
 pkg lua-language-server
 
@@ -93,7 +95,7 @@ pkg:arch zathura-pdf-mupdf
 # linux systems                                  #
 ##################################################
 
-pkg:macos claude-code
+# pkg:macos claude-code
 
 ##################################################
 # Configuration symlinks.                        #
@@ -107,6 +109,7 @@ link zsh/zshrc ~/.zshrc
 link nvim ~/.config/nvim
 link alacritty ~/.config/alacritty
 link tmux/tmux.conf ~/.tmux.conf
+link kakoune ~/.config/kak
 link:arch sway ~/.config/sway
 link:arch waybar ~/.config/waybar
 link:arch rofi ~/.config/rofi

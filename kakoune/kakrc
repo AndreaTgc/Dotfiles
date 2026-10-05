@@ -1,0 +1,21 @@
+# AndreaTgc's kakoune config.
+# I kind of have no idea what i am doing so far, i am just trying to create a
+# typing environment that is both minimal and suited for my personal workflow.
+# If you are copying this, chances are you may feel different about some stuff
+# and you should absolutely change this to match your needs
+set-option global scrolloff 8,5
+
+# Reload the file if it changed on disk (for whatever reason)
+set-option global autoreload yes
+
+set-option global ui_options terminal_assistant=none
+
+# Define line numbers as relative and absolute only under the cursor, this is
+# done to match my old neovim config and i think it's a good choice overall.
+add-highlighter global/ number-lines -relative -hlcursor -min-digits 3 -separator ' '
+
+# Highlights the bracket matching the one under the cursor. Useful for nested
+# code and lisp.
+add-highlighter global/ show-matching
+
+colorscheme gruvbox-dark
