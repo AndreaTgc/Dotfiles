@@ -86,6 +86,7 @@ pkg:arch slurp
 pkg:arch zathura
 pkg:arch zathura-pdf-mupdf
 pkg:arch gcc-ada
+pkg:arch unzip
 
 ##################################################
 # MacOS specific applications.                   #

@@ -21,3 +21,8 @@ alias l="eza -l"
 
 # Misc variables
 export EDITOR=nvim
+
+# Additional installed binaries (that aren't available with package managers)
+# are added in the Binaries directory in the root. Here we just add some of
+# them to the path
+export PATH="$HOME/Binaries/Alire/bin/:$PATH"
