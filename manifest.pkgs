@@ -28,8 +28,6 @@ pkg python3
 pkg go
 pkg cmake
 pkg uv
-pkg kakoune
-
 pkg lua-language-server
 
 # Note: these are not meant to be platform specific
@@ -87,6 +85,7 @@ pkg:arch grim
 pkg:arch slurp
 pkg:arch zathura
 pkg:arch zathura-pdf-mupdf
+pkg:arch gcc-ada
 
 ##################################################
 # MacOS specific applications.                   #
