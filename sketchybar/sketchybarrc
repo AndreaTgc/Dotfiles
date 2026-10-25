@@ -1,13 +1,12 @@
 #!/bin/bash
 
-# Colors (Gruber Darker, modified)
-BG=0xff121212
-FG=0xfff2f2f2
-DIM=0xff8a8a8a
-ACCENT=0xffff8a2b
+source "$HOME/.config/sketchybar/colors.sh"
+FONT="IosevkaTerm Nerd Font"
+PLUGINS="$HOME/.config/sketchybar/plugins"
 
-FONT="Iosevka"
-SPACES=5
+##
+# Default bar position and padding
+##
 
 sketchybar --bar \
   position=top height=30 \
@@ -15,24 +14,98 @@ sketchybar --bar \
   padding_left=8 padding_right=8 \
   shadow=off
 
-sketchybar --default \
-  icon.font="$FONT:Bold:14.0" \
-  icon.color=$DIM \
-  icon.highlight_color=$ACCENT \
-  icon.padding_left=6 icon.padding_right=6 \
-  label.drawing=off \
-  background.color=0x00000000 \
-  background.corner_radius=4 \
-  background.height=20
+##
+# Default values for all items if not overridden
+##
 
+sketchybar --default \
+  icon.font="$FONT:Regular:13.0" \
+  icon.color=$FG \
+  icon.highlight_color=$ACCENT \
+  label.font="$FONT:Bold:13.0" \
+  label.color=$FG \
+  padding_left=4 padding_right=4 \
+  icon.padding_left=8 icon.padding_right=4 \
+  label.padding_left=4 label.padding_right=8 \
+  background.color=$BG_ALT \
+  background.border_color=$ACCENT \
+  background.border_width=1 \
+  background.corner_radius=4 \
+  background.height=22
+
+##
+# Display the name of the current app
+##
+
+sketchybar --add item front_app left \
+  --set front_app \
+     icon.drawing=off \
+     label.color=$FG \
+     script="sh $PLUGINS/front_app.sh" \
+  --subscribe front_app front_app_switched
+
+##
+# Display current active space with aerospace
+# Each space is an item that can either be full or empty 
+##
+
+# Declare the custom event before anything subscribes to it
+sketchybar --add event aerospace_workspace_change
+SPACES=5
+AEROSPACE="/Users/andreacolombo/Binaries/aerospace/bin/aerospace"
 for i in $(seq 1 $SPACES); do
-  sketchybar --add item space.$i left \
+  sketchybar --add item space.$i center \
     --set space.$i \
       icon="○" \
-      script="$HOME/.config/sketchybar/plugins/space.sh" \
-      click_script="/opt/local/bin/aerospace workspace $i" \
+      icon.padding_left=4 \
+      icon.padding_right=4 \
+      label.drawing=off \
+      background.border_color=$BG \
+      background.color=$BG \
+      script="sh $PLUGINS/space.sh" \
+      click_script="$AEROSPACE workspace $i" \
     --subscribe space.$i aerospace_workspace_change
 done
+
+##
+# Display battery state
+##
+
+sketchybar --add item wifi right \
+  --set wifi \
+    icon="" \
+    update_freq=30 \
+    script="sh $PLUGINS/wifi.sh"
+
+sketchybar --add item battery right \
+  --set battery \
+    icon="" \
+    icon.color=$DIM \
+    label.color=$FG \
+    update_freq=1 \
+    script="sh $PLUGINS/battery.sh"
+
+##
+# Display clock with minutes precision
+##
+
+sketchybar --add item time right \
+  --set time \
+    icon="" \
+    icon.color=$DIM \
+    label.color=$FG \
+    update_freq=60 \
+    script="sh $PLUGINS/clock.sh"
+
+##
+# Show current CPU load
+##
+
+sketchybar --add item cpu right \
+  --set cpu \
+    icon="CPU: " \
+    update_freq=10 \
+    script="sh $PLUGINS/cpu.sh"
 
 sketchybar --update
 

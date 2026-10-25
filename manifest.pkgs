@@ -41,7 +41,6 @@ pkg go
 pkg cmake
 pkg uv
 pkg lua-language-server
-pkg micro
 
 # Note: these are not meant to be platform specific
 # but there are some naming inconsistencies between
@@ -109,7 +108,6 @@ pkg:arch unzip
 ##################################################
 
 # pkg:macos claude-code
-pkg:macos choose-gui
 pkg:macos sketchybar
 
 ##################################################
@@ -124,7 +122,6 @@ link zsh/zshrc ~/.zshrc
 link nvim ~/.config/nvim
 link alacritty ~/.config/alacritty
 link tmux/tmux.conf ~/.tmux.conf
-link micro ~/.config/micro
 link:macos sketchybar ~/.config/sketchybar
 link:macos mac_plists/local.sketchybar.plist ~/Library/LaunchAgents/local.sketchybar.plist
 link:macos aerospace/aerospace.toml ~/.aerospace.toml
