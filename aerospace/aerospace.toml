@@ -1,0 +1,53 @@
+config-version = 2
+
+start-at-login = true
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+# Notify SketchyBar when the workspace changes
+exec-on-workspace-change = [
+    '/bin/bash', '-c',
+    '/opt/local/bin/sketchybar --trigger aerospace_workspace_change'
+]
+
+[gaps]
+inner.horizontal = 8
+inner.vertical = 8
+outer.left = 4
+outer.right = 4
+outer.bottom = 4
+outer.top = 34
+
+[mode.main.binding]
+# Apps
+cmd-ctrl-enter = 'exec-and-forget open -a Alacritty'
+cmd-ctrl-d = 'exec-and-forget open -a Raycast'
+
+# Window actions
+cmd-ctrl-shift-q = 'close'
+cmd-ctrl-f = 'fullscreen'
+
+# Focus
+cmd-ctrl-h = 'focus left'
+cmd-ctrl-j = 'focus down'
+cmd-ctrl-k = 'focus up'
+cmd-ctrl-l = 'focus right'
+
+# Lock screen
+cmd-ctrl-esc = 'exec-and-forget "/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession" -suspend'
+
+# Screenshot selection (saved to ~/Pictures/Screenshots)
+cmd-ctrl-shift-s = 'exec-and-forget screencapture -i'
+
+# Workspaces
+cmd-ctrl-1 = 'workspace 1'
+cmd-ctrl-2 = 'workspace 2'
+cmd-ctrl-3 = 'workspace 3'
+cmd-ctrl-4 = 'workspace 4'
+cmd-ctrl-5 = 'workspace 5'
+
+cmd-ctrl-shift-1 = 'move-node-to-workspace 1'
+cmd-ctrl-shift-2 = 'move-node-to-workspace 2'
+cmd-ctrl-shift-3 = 'move-node-to-workspace 3'
+cmd-ctrl-shift-4 = 'move-node-to-workspace 4'
+cmd-ctrl-shift-5 = 'move-node-to-workspace 5'

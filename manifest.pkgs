@@ -5,6 +5,18 @@
 # NOTE: only Arch supported as linux for now     #
 ##################################################
 
+##
+# Note: Not every program i have can currently be
+# the package managers (MacPorts and Pacman).
+# Some additional ones i had to manually install
+# are:
+# - GNAT (frontend for Ada GCC) from the git link
+#   of the GNAT FSF
+# - GprBuild (build system for Ada) from the git
+#   link of the GNAT FSF (search for alire and
+#   look at the repos)
+##
+
 pkg lazygit
 pkg ripgrep
 pkg bat
@@ -29,6 +41,7 @@ pkg go
 pkg cmake
 pkg uv
 pkg lua-language-server
+pkg micro
 
 # Note: these are not meant to be platform specific
 # but there are some naming inconsistencies between
@@ -96,6 +109,8 @@ pkg:arch unzip
 ##################################################
 
 # pkg:macos claude-code
+pkg:macos choose-gui
+pkg:macos sketchybar
 
 ##################################################
 # Configuration symlinks.                        #
@@ -109,7 +124,10 @@ link zsh/zshrc ~/.zshrc
 link nvim ~/.config/nvim
 link alacritty ~/.config/alacritty
 link tmux/tmux.conf ~/.tmux.conf
-link kakoune ~/.config/kak
+link micro ~/.config/micro
+link:macos sketchybar ~/.config/sketchybar
+link:macos mac_plists/local.sketchybar.plist ~/Library/LaunchAgents/local.sketchybar.plist
+link:macos aerospace/aerospace.toml ~/.aerospace.toml
 link:arch sway ~/.config/sway
 link:arch waybar ~/.config/waybar
 link:arch rofi ~/.config/rofi

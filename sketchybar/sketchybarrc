@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Colors (Gruber Darker, modified)
+BG=0xff121212
+FG=0xfff2f2f2
+DIM=0xff8a8a8a
+ACCENT=0xffff8a2b
+
+FONT="Iosevka"
+SPACES=5
+
+sketchybar --bar \
+  position=top height=30 \
+  color=$BG \
+  padding_left=8 padding_right=8 \
+  shadow=off
+
+sketchybar --default \
+  icon.font="$FONT:Bold:14.0" \
+  icon.color=$DIM \
+  icon.highlight_color=$ACCENT \
+  icon.padding_left=6 icon.padding_right=6 \
+  label.drawing=off \
+  background.color=0x00000000 \
+  background.corner_radius=4 \
+  background.height=20
+
+for i in $(seq 1 $SPACES); do
+  sketchybar --add item space.$i left \
+    --set space.$i \
+      icon="○" \
+      script="$HOME/.config/sketchybar/plugins/space.sh" \
+      click_script="/opt/local/bin/aerospace workspace $i" \
+    --subscribe space.$i aerospace_workspace_change
+done
+
+sketchybar --update
+
+# Draw the correct state once at load
+sketchybar --trigger aerospace_workspace_change
