@@ -1,11 +1,12 @@
+vim.pack.add({
+	{ src = "https://github.com/echasnovski/mini.nvim" },
+    { src = "https://github.com/stevearc/oil.nvim" },
+    { src = "https://github.com/blazkowolf/gruber-darker.nvim" }
+})
+
 require "config.opts"
 require "config.lsp"
 require "config.theme"
-
-vim.pack.add({
-	{ src = "https://github.com/echasnovski/mini.nvim" },
-    { src = "https://github.com/stevearc/oil.nvim" }
-})
 
 require("mini.icons").setup()
 require("mini.statusline").setup()

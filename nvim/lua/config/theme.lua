@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "catppuccin",
+    pattern = "gruber-darker",
     callback = function()
         local transparent_groups = {
             "Normal",
@@ -17,4 +17,4 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("gruber-darker")

@@ -27,4 +27,4 @@ export EDITOR=nvim
 # them to the path
 export PATH="$HOME/Binaries/gnat/bin/:$PATH"
 export PATH="$HOME/Binaries/gprbuild/bin/:$PATH"
-export PATH="$HOME/Binaries/aerospace/bin/:$PATH"
+export PATH="$HOME/.local/bin:$PATH"

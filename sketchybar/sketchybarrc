@@ -68,7 +68,7 @@ for i in $(seq 1 $SPACES); do
 done
 
 ##
-# Display battery state
+# Display connected wifi (or disconnected) 
 ##
 
 sketchybar --add item wifi right \
@@ -77,9 +77,13 @@ sketchybar --add item wifi right \
     update_freq=30 \
     script="sh $PLUGINS/wifi.sh"
 
+##
+# Display battery state
+##
+
 sketchybar --add item battery right \
   --set battery \
-    icon="" \
+    icon="󱊣" \
     icon.color=$DIM \
     label.color=$FG \
     update_freq=1 \
@@ -91,7 +95,7 @@ sketchybar --add item battery right \
 
 sketchybar --add item time right \
   --set time \
-    icon="" \
+    icon="󱑈" \
     icon.color=$DIM \
     label.color=$FG \
     update_freq=60 \
